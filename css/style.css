@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font-weight: normal;
+    text-decoration: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 85%;
+    max-width: 1350px;
+    margin: 0 auto;
+    background-color: #141414;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+body {
+    background-color: #141414;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+
+header .logo img {
+    max-width: 70%;
+}
+
+header .right ul {
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    margin-right: 46px;
+    opacity: 0.5;
+}
+
+header ul li:nth-child(3) {
+    opacity: 1;
+}
+
+header ul li:hover {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+header ul li:last-child {
+    margin-right: 0;
+}
+
+header ul li a {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+}
+
+header ul .button {
+    padding: 14px 32px;
+    border: 1px solid #d45945;
+    border-radius: 6px;
+    color: #d45945;
+}
+
+
+/* header end */
+
+
+/* spotlight start */
+
+.spotlight .wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.spotlight .left {
+    width: 50%;
+}
+
+.spotlight .left h1 {
+    width: 70%;
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.spotlight .left h1 span {
+    color: #d45945;
+}
+
+.spotlight .left p {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.spotlight .left .button {
+    width: 34%;
+    padding: 14px 28px;
+    background-image: linear-gradient(#d45945, #A14D9B);
+    border-radius: 8px;
+    color: #fff;
+    display: block;
+}
+
+
+/* spotlight end */
+
+
+/* award start */
+
+.award {
+    padding: 60px 0;
+}
+
+.award ul {
+    display: flex;
+}
+
+.award ul li {
+    border: 1px solid #d45945;
+    width: 23%;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 24px;
+}
+
+.award ul li:last-child {
+    margin-right: 0;
+}
+
+.award ul li .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.award ul li .top img {
+    background-color: #292828;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.award ul li .top small {
+    color: #fff;
+}
+
+.award ul li h3 {
+    color: #6d6b6b;
+    margin-bottom: 20px;
+}
+
+.award ul li h1 {
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.award ul li h2 {
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.award ul li .bottom {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.award ul li .bottom h3 {
+    color: #fff;
+}
+
+
+/* award end */
+
+.review .wrapper {
+    background-image: url(../images/Footer\ -\ image.png);
+    height: 500px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.review .container {
+    padding: 0 80px;
+}
+
+.review h1 {
+    color: #fff;
+    font-size: 60px;
+    width: 90%;
+    margin-bottom: 24px;
+}
+
+.review p {
+    color: #fff;
+    font-size: 24px;
+    width: 68%;
+    margin-bottom: 20px;
+}
+
+.review form {
+    border: 1px solid #fff;
+    width: 30%;
+    padding: 18px 220px 18px 40px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    background-color: #fff;
+}
+
+.review .button {
+    width: 11%;
+    padding: 20px 40px;
+    background-image: linear-gradient(#d45945, #A14D9B);
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+    bottom: 61px;
+    left: 235px;
+}
+
+
+/* review end */
