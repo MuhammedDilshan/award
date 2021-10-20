@@ -28,8 +28,27 @@ del {
     text-decoration: line-through;
 }
 
+@font-face {
+    font-family: 'Gordita Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('../fonts/Gordita Medium'), url('../fonts/Gordita Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gordita Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('../fonts/Gordita Regular'), url('../fonts/Gordita Regular.woff') format('woff');
+}
+
 body {
     background-color: #141414;
+    font-family: 'Gordita Regular';
+}
+
+h1 {
+    font-family: 'Gordita Medium';
 }
 
 header .wrapper {
@@ -51,10 +70,7 @@ header .right ul {
 header ul li {
     margin-right: 46px;
     opacity: 0.5;
-}
-
-header ul li:nth-child(3) {
-    opacity: 1;
+    transition: 0.3s ease-in;
 }
 
 header ul li:hover {
@@ -77,6 +93,17 @@ header ul .button {
     border: 1px solid #d45945;
     border-radius: 6px;
     color: #d45945;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: linear-gradient(#141414, #141414) padding-box, linear-gradient(to right, #d45945, #A14D9B) border-box;
+    padding: 10px 20px;
+    transition: .3s ease-in;
+}
+
+header ul .button:hover {
+    background: linear-gradient(to right, #d45945, #A14D9B);
+    color: #fff;
 }
 
 
@@ -88,14 +115,15 @@ header ul .button {
 .spotlight .wrapper {
     display: flex;
     align-items: center;
+    height: calc(100vh - 100px);
 }
 
 .spotlight .left {
-    width: 50%;
+    width: 60%;
 }
 
 .spotlight .left h1 {
-    width: 70%;
+    width: 80%;
     font-size: 48px;
     color: #fff;
     margin-bottom: 24px;
@@ -106,19 +134,53 @@ header ul .button {
 }
 
 .spotlight .left p {
-    color: #fff;
+    color: #5b5a5d;
     font-size: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 36px;
     display: block;
 }
 
 .spotlight .left .button {
-    width: 34%;
+    width: 30%;
     padding: 14px 28px;
-    background-image: linear-gradient(#d45945, #A14D9B);
+    background-image: linear-gradient(to right, #d45945, #A14D9B);
     border-radius: 8px;
     color: #fff;
     display: block;
+}
+
+.spotlight .left .button span {
+    color: #cac9c9;
+    font-size: 14px;
+}
+
+.spotlight .right {
+    width: 40%;
+}
+
+.spotlight .right .blur {
+    filter: blur(50px);
+    display: flex;
+    position: relative;
+}
+
+.spotlight .right .blur img {
+    width: 50%;
+    position: absolute;
+}
+
+.spotlight .right .blur img.bottom {
+    bottom: -10px;
+    left: 240px;
+}
+
+.spotlight .right .vision {
+    position: absolute;
+    top: 100px;
+}
+
+.spotlight .right .vision img {
+    width: 100%;
 }
 
 
@@ -141,10 +203,17 @@ header ul .button {
     padding: 20px;
     border-radius: 8px;
     margin-right: 24px;
+    transition: .3s ease-in;
 }
 
 .award ul li:last-child {
     margin-right: 0;
+}
+
+.award ul li:hover {
+    background-image: linear-gradient(130deg, #d45945, #A14D9B);
+    transform: scale(1.1);
+    transition: .5s ease-in;
 }
 
 .award ul li .top {
@@ -164,28 +233,32 @@ header ul .button {
 }
 
 .award ul li h3 {
-    color: #6d6b6b;
+    color: #5b5a5d;
     margin-bottom: 20px;
 }
 
 .award ul li h1 {
     color: #fff;
     margin-bottom: 18px;
+    font-size: 18px;
 }
 
 .award ul li h2 {
     color: #fff;
     margin-bottom: 16px;
+    font-size: 18px;
 }
 
 .award ul li .bottom {
     margin-top: 16px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.award ul li .bottom h3 {
+.award ul li .bottom span {
     color: #fff;
+    font-size: 18px;
 }
 
 
@@ -193,8 +266,9 @@ header ul .button {
 
 .review .wrapper {
     background-image: url(../images/Footer\ -\ image.png);
-    height: 500px;
+    height: 400px;
     background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
 }
@@ -205,8 +279,8 @@ header ul .button {
 
 .review h1 {
     color: #fff;
-    font-size: 60px;
-    width: 90%;
+    font-size: 46px;
+    width: 70%;
     margin-bottom: 24px;
 }
 
@@ -229,13 +303,67 @@ header ul .button {
 .review .button {
     width: 11%;
     padding: 20px 40px;
-    background-image: linear-gradient(#d45945, #A14D9B);
+    background-image: linear-gradient(to right, #d45945, #A14D9B);
     border-radius: 10px;
     color: #fff;
     position: relative;
-    bottom: 61px;
+    bottom: 66px;
     left: 235px;
 }
 
 
 /* review end */
+
+
+/* footer start */
+
+footer {
+    padding: 80px 0 40px 0;
+}
+
+footer .wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .left {
+    width: 40%;
+}
+
+footer .left img {
+    width: 45%;
+}
+
+footer .left p {
+    color: #5b5a5d;
+    width: 57%;
+}
+
+footer .right {
+    display: flex;
+    align-items: center;
+}
+
+footer .right ul {
+    display: flex;
+}
+
+footer .right ul li {
+    margin-right: 20px;
+}
+
+footer .right ul li a {
+    color: #5b5a5d;
+}
+
+footer .right ul li:last-child {
+    border-right: 1px solid #6d6b6b;
+    padding-right: 18px;
+}
+
+footer .right p {
+    color: #5b5a5d;
+}
+
+
+/* footer end */
